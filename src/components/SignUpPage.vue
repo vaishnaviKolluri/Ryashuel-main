@@ -41,8 +41,12 @@ import { ref } from 'vue'
             <div v-if=" !isSuitablePassword() " style="font-size: 12px; margin-top: 5px; color: red;">
                 Password should be longer than 5 characters.
             </div>
-            <div v-if=" isSuitablePassword() && hasClickedSubmit" style="font-size: 12px; margin-top: 5px; color: red;">
-                Account created!
+            <div v-if=" isSuitablePassword() && hasClickedSubmit" style="font-size: 18px; margin-top: 10px; color: red;">
+                Account created! Please 
+                <router-link to="/login">
+                    log in
+                </router-link>
+                to confirm.
             </div>
 
         </div>
